@@ -6,10 +6,16 @@ build-backend = "setuptools.build_meta"
 name = "tdmg"
 version = "0.1.0"
 description = "Trainiere dein musikalisches Gehör"
+readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "numpy",
     "sounddevice",
+]
+
+license = "GPL-3.0"
+authors = [
+    { name = "Martin Lehmann" },
 ]
 
 [project.scripts]
@@ -36,6 +42,15 @@ py-modules = [
     "overtone",
 ]
 
+[project.urls]
+Homepage = "https://mathemartin.de/programme.html"
+Repository = "https://github.com/mathemartin/Trainiere-dein-musikalisches-Geh-r"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+]
+
 [tool.ruff]
 line-length = 88
 
@@ -44,9 +59,9 @@ quote-style = "double"
 indent-style = "space"
 
 # soweit der python code ordentlich bereinigt wird, kann später auch …
-#~ [tool.ruff.lint]
-#~ select = [
-    #~ "E",
-    #~ "F",
-    #~ "W",
-#~ ]
+# [tool.ruff.lint]
+# select = [
+    # "E",
+    # "F",
+    # "W",
+# ]
