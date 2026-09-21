@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tdmg"
+version = "0.1.0"
+description = "Trainiere dein musikalisches Gehör"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy",
+    "sounddevice",
+]
+
+[project.scripts]
+tdmg = "main:main"
+
+[tool.setuptools]
+py-modules = [
+    "main",
+    "gui",
+    "variables",
+    "const",
+    "table",
+    "overtones",
+    "scale",
+    "rhythm",
+    "settings",
+    "button_bar",
+    "dialog",
+    "end_window",
+    "note",
+    "random_matrix",
+    "chord",
+    "overtone_matrix",
+    "overtone",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# soweit der python code ordentlich bereinigt wird, kann später auch …
+#~ [tool.ruff.lint]
+#~ select = [
+    #~ "E",
+    #~ "F",
+    #~ "W",
+#~ ]
